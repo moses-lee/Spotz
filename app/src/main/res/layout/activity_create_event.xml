@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spotz2share.spotz.CreateEventActivity"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="2dp"
+      >
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:text="@string/new_event"
+            android:textColor="#fff"
+
+            android:layout_toEndOf="@+id/backbtn"
+           />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/eName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_title"
+                android:textSize="16sp"
+                android:inputType="textShortMessage"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:textColor="@color/colorText"
+                android:text="@string/untitled"
+
+                />
+            <EditText
+                android:id="@+id/eDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date"
+                android:textSize="16sp"
+                android:inputType="date"
+                android:layout_marginTop="20dp"
+                android:focusable="false"
+                android:longClickable="false"
+                android:textColor="@color/colorText"
+                />
+            <TextView
+                android:id="@+id/eLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/location"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorText"
+                />
+            <EditText
+                android:id="@+id/eDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="5"
+                android:maxLength="100"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorText"
+                />
+
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/eEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/invite_friends_through_email"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:maxLines="10"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="50dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/additional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_from"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:hint="From:"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorText"/>
+
+                <EditText
+                    android:id="@+id/et_to"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:hint="To:"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorText"/>
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/ePublic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/spublic"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/eFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/friends"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:id="@+id/ePrivate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#368882"
+            android:text="@string/sprivate"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize">
+
+        <TextView
+            android:id="@+id/post_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#7c7c7c"
+            />
+        <TextView
+            android:id="@+id/asterik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_toStartOf="@+id/post_tag"
+            android:layout_centerVertical="true"
+            android:textColor="#7c7c7c"
+            android:text="*"/>
+
+        <TextView
+            android:id="@+id/deletebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorNegative"
+            android:layout_marginEnd="10dp"
+            android:text="@string/delete"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/relative"
+        android:layout_above="@+id/comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mRecycle"/>
+
+    <EditText
+        android:id="@+id/comment_input"
+        style="?android:textAppearanceLarge"
+        android:textColor="#7c7c7c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/write_a_comment"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="true"
+        android:inputType="textShortMessage"
+        android:imeOptions="actionDone"
+        android:maxLength="40"
+        />
+
+</RelativeLayout>

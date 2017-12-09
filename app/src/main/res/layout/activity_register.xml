@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spotz2share.spotz.RegisterActivity"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/rName"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:backgroundTint="#fff"
+                    android:textSize="18sp"
+                    android:maxLength="15"
+                    />
+
+
+
+                <EditText
+                    android:id="@+id/rEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:backgroundTint="#fff"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"/>
+
+
+                <EditText
+                    android:id="@+id/rPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:focusableInTouchMode="true"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:backgroundTint="#fff"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/rButton"
+                    android:background="#fff"
+                    android:layout_marginTop="40dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/rProgress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="278dp"
+            android:layout_height="370dp"
+            android:layout_centerHorizontal="true"
+
+
+            />
+
+
+            <EditText
+                android:id="@+id/uTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tag"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:inputType="textShortMessage"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:backgroundTint="@color/colorPrimary"
+                android:textSize="21sp"
+                android:layout_above="@+id/uploadbtn"
+                android:layout_marginBottom="20dp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/uploadbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/done"
+                android:textColor="#fff"
+                android:background="@color/colorPositive"
+                android:textSize="23sp"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                />
+
+
+
+
+
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/uProgress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+    />
+
+
+</RelativeLayout>

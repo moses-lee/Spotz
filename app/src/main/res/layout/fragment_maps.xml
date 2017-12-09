@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.spotz2share.spotz.nav_fragments.MapsFragment" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_white"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        android:layout_above="@+id/linear"/>
+
+<!--    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_add"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:backgroundTint="#ffc66b"
+        android:src="@android:drawable/ic_menu_camera"
+        android:tint="#fff"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+       />-->
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/mPublic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_public"
+            android:tint="#DDD"/>
+
+        <ImageView
+            android:id="@+id/mFriends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_people"
+            android:tint="#DDD"/>
+        <ImageView
+            android:id="@+id/mPrivate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_person"
+            android:tint="#DDD"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
